@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enterprise legacy systems consulting. Expert ASP Classic, VB6, VBA modernization services. Strategic migration, compliance, and ongoing support for mission-critical applications.">
+    <meta name="keywords" content="legacy systems consulting, ASP Classic migration, VB6 modernization, enterprise VBA support, legacy application management, IT modernization strategy, compliance remediation">
+    <meta name="author" content="Legacy Systems Consulting">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Legacy Systems Consulting | Enterprise Modernization Services">
+    <meta property="og:description" content="Strategic consulting for legacy Windows applications. ASP Classic, VB6, VBA modernization with zero business disruption.">
+    <meta property="og:image" content="/images/og-enterprise.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Legacy Systems Consulting | Enterprise Solutions">
+    <meta name="twitter:description" content="Trusted partner for Fortune 500 legacy system modernization. 20+ years of enterprise experience.">
+
+    <title>Legacy Systems Consulting | Enterprise ASP Classic, VB6 & VBA Modernization</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'enterprise': {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                            950: '#082f49',
+                        },
+                        'slate': {
+                            850: '#1a2332',
+                        }
+                    },
+                    fontFamily: {
+                        'display': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- AOS - Animate On Scroll Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Legacy Systems Consulting",
+        "description": "Enterprise consulting services for ASP Classic, VB6, VBA, and legacy Windows application modernization",
+        "serviceType": ["IT Consulting", "Software Migration", "Legacy Modernization", "Enterprise Support"],
+        "areaServed": "Worldwide",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Enterprise Services",
+            "itemListElement": [
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Strategic Assessment"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Managed Modernization"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Enterprise Support"}}
+            ]
+        }
+    }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        .gradient-text {
+            background: linear-gradient(135deg, #0369a1 0%, #0ea5e9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .subtle-grid {
+            background-image:
+                linear-gradient(rgba(14, 165, 233, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(14, 165, 233, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body class="font-display bg-white text-slate-800 antialiased">
+
+    <!-- Top Bar -->
+    <div class="bg-slate-900 text-slate-300 py-2 px-4 text-center text-sm">
+        <span>Trusted by enterprises worldwide for legacy system modernization</span>
+        <span class="mx-3 text-slate-600">|</span>
+        <a href="#contact" class="text-enterprise-400 hover:text-enterprise-300 font-medium">Schedule a Consultation &rarr;</a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-enterprise-600 to-enterprise-700 rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold text-slate-900">Legacy Systems</span>
+                        <span class="text-xl font-light text-slate-500"> Consulting</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#services" class="text-slate-600 hover:text-enterprise-600 transition-colors font-medium">Services</a>
+                    <a href="#approach" class="text-slate-600 hover:text-enterprise-600 transition-colors font-medium">Approach</a>
+                    <a href="#technologies" class="text-slate-600 hover:text-enterprise-600 transition-colors font-medium">Technologies</a>
+                    <a href="#industries" class="text-slate-600 hover:text-enterprise-600 transition-colors font-medium">Industries</a>
+                    <a href="#contact" class="bg-enterprise-600 hover:bg-enterprise-700 text-white font-semibold px-6 py-2.5 rounded-lg transition-all">
+                        Contact Us
+                    </a>
+                </div>
+                <button class="md:hidden text-slate-600" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="#services" class="block py-2 text-slate-600 hover:text-enterprise-600">Services</a>
+                <a href="#approach" class="block py-2 text-slate-600 hover:text-enterprise-600">Approach</a>
+                <a href="#technologies" class="block py-2 text-slate-600 hover:text-enterprise-600">Technologies</a>
+                <a href="#industries" class="block py-2 text-slate-600 hover:text-enterprise-600">Industries</a>
+                <a href="#contact" class="block py-2 text-enterprise-600 font-semibold">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-enterprise-50 subtle-grid">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="inline-flex items-center bg-enterprise-100 text-enterprise-700 rounded-full px-4 py-2 mb-6 text-sm font-medium" data-aos="fade-right" data-aos-duration="600">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        Trusted by Fortune 500 Companies
+                    </div>
+
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-slate-900" data-aos="fade-up" data-aos-duration="800">
+                        Legacy Systems
+                        <span class="gradient-text block">Modernization</span>
+                        <span class="text-slate-500 font-normal">Done Right</span>
+                    </h1>
+
+                    <p class="text-xl text-slate-600 mb-8 leading-relaxed max-w-xl" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                        Strategic consulting for organizations running mission-critical ASP Classic, VB6, and VBA applications.
+                        We help you modernize with confidence, ensuring business continuity every step of the way.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 mb-12" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                        <a href="#contact" class="bg-enterprise-600 hover:bg-enterprise-700 text-white font-semibold px-8 py-4 rounded-xl text-lg transition-all text-center shadow-lg shadow-enterprise-600/20">
+                            Schedule Consultation
+                        </a>
+                        <a href="#services" class="border-2 border-slate-300 hover:border-enterprise-600 text-slate-700 hover:text-enterprise-600 font-semibold px-8 py-4 rounded-xl text-lg transition-all text-center">
+                            Explore Services
+                        </a>
+                    </div>
+
+                    <!-- Trust Indicators -->
+                    <div class="border-t border-slate-200 pt-8" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                        <p class="text-sm text-slate-500 mb-4 uppercase tracking-wide font-medium">Trusted By Industry Leaders</p>
+                        <div class="flex flex-wrap items-center gap-8 opacity-60">
+                            <div class="text-2xl font-bold text-slate-400">ACME Corp</div>
+                            <div class="text-2xl font-bold text-slate-400">GlobalTech</div>
+                            <div class="text-2xl font-bold text-slate-400">MedSys</div>
+                            <div class="text-2xl font-bold text-slate-400">FinServe</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative hidden lg:block" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <!-- Enterprise Illustration -->
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-enterprise-500/10 to-enterprise-600/5 rounded-3xl transform rotate-3"></div>
+                        <div class="relative bg-white rounded-2xl shadow-2xl shadow-slate-200/50 p-8 border border-slate-100">
+                            <div class="flex items-center justify-between mb-6">
+                                <h3 class="font-semibold text-slate-900">Modernization Progress</h3>
+                                <span class="text-enterprise-600 text-sm font-medium">Q4 2025</span>
+                            </div>
+
+                            <div class="space-y-4 mb-6">
+                                <div>
+                                    <div class="flex justify-between text-sm mb-1">
+                                        <span class="text-slate-600">ASP Classic Migration</span>
+                                        <span class="text-slate-900 font-medium">100%</span>
+                                    </div>
+                                    <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                                        <div class="h-full bg-green-500 rounded-full" style="width: 100%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-sm mb-1">
+                                        <span class="text-slate-600">VB6 Applications</span>
+                                        <span class="text-slate-900 font-medium">85%</span>
+                                    </div>
+                                    <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                                        <div class="h-full bg-enterprise-500 rounded-full" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-sm mb-1">
+                                        <span class="text-slate-600">Database Migration</span>
+                                        <span class="text-slate-900 font-medium">72%</span>
+                                    </div>
+                                    <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                                        <div class="h-full bg-enterprise-400 rounded-full" style="width: 72%"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-100">
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-slate-900">47</div>
+                                    <div class="text-xs text-slate-500">Apps Migrated</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-slate-900">0</div>
+                                    <div class="text-xs text-slate-500">Downtime Hours</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-green-600">99.9%</div>
+                                    <div class="text-xs text-slate-500">Uptime</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Value Proposition Stats -->
+    <section class="py-16 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="0">
+                    <div class="text-4xl md:text-5xl font-bold text-enterprise-400 mb-2">20+</div>
+                    <div class="text-slate-400">Years of Experience</div>
+                </div>
+                <div class="text-center" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="100">
+                    <div class="text-4xl md:text-5xl font-bold text-enterprise-400 mb-2">500+</div>
+                    <div class="text-slate-400">Projects Delivered</div>
+                </div>
+                <div class="text-center" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="200">
+                    <div class="text-4xl md:text-5xl font-bold text-enterprise-400 mb-2">99.9%</div>
+                    <div class="text-slate-400">Client Satisfaction</div>
+                </div>
+                <div class="text-center" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="300">
+                    <div class="text-4xl md:text-5xl font-bold text-enterprise-400 mb-2">0</div>
+                    <div class="text-slate-400">Failed Migrations</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 md:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up" data-aos-duration="800">
+                <p class="text-enterprise-600 font-semibold mb-4 uppercase tracking-wide">Our Services</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-slate-900">
+                    Comprehensive Legacy System Solutions
+                </h2>
+                <p class="text-xl text-slate-600">
+                    From strategic assessment to full-scale modernization, we provide end-to-end services
+                    tailored to your organization's unique requirements.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <article class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:border-enterprise-200 card-hover transition-all duration-300" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
+                    <div class="w-14 h-14 bg-enterprise-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-enterprise-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Strategic Assessment</h3>
+                    <p class="text-slate-600 mb-6">
+                        Comprehensive evaluation of your legacy portfolio. We identify opportunities,
+                        assess risks, and develop a prioritized modernization roadmap aligned with your business objectives.
+                    </p>
+                    <ul class="space-y-3 text-slate-600 text-sm">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-enterprise-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Application portfolio analysis</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-enterprise-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Technical debt quantification</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-enterprise-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Compliance gap analysis</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-enterprise-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>ROI-driven prioritization</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <!-- Service 2 -->
+                <article class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:border-enterprise-200 card-hover transition-all duration-300" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-enterprise-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-enterprise-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Managed Modernization</h3>
+                    <p class="text-slate-600 mb-6">
+                        End-to-end migration services with zero business disruption. We modernize your
+                        legacy applications using proven methodologies and incremental delivery.
+                    </p>
+                    <ul class="space-y-3 text-slate-600 text-sm">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-enterprise-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>ASP Classic to .NET Core/8</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-enterprise-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>VB6 to C# transformation</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-enterprise-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Access to SQL Server/Azure</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-enterprise-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Cloud-native architecture</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <!-- Service 3 -->
+                <article class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:border-enterprise-200 card-hover transition-all duration-300" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-enterprise-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-enterprise-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Enterprise Support</h3>
+                    <p class="text-slate-600 mb-6">
+                        Ongoing maintenance and support for your legacy systems. We keep your
+                        applications running smoothly while you plan for the future.
+                    </p>
+                    <ul class="space-y-3 text-slate-600 text-sm">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-enterprise-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>24/7 production support</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-enterprise-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Security patch management</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-enterprise-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Performance optimization</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-enterprise-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Compliance maintenance</span>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+
+            <!-- Additional Services Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+                <div class="bg-slate-50 rounded-xl p-6 border border-slate-100" data-aos="flip-up" data-aos-duration="600" data-aos-delay="0">
+                    <h4 class="font-semibold text-slate-900 mb-2">Security & Compliance</h4>
+                    <p class="text-slate-600 text-sm">DCOM hardening, vulnerability remediation, and regulatory compliance.</p>
+                </div>
+                <div class="bg-slate-50 rounded-xl p-6 border border-slate-100" data-aos="flip-up" data-aos-duration="600" data-aos-delay="100">
+                    <h4 class="font-semibold text-slate-900 mb-2">Integration Services</h4>
+                    <p class="text-slate-600 text-sm">Connect legacy systems with modern APIs, cloud services, and applications.</p>
+                </div>
+                <div class="bg-slate-50 rounded-xl p-6 border border-slate-100" data-aos="flip-up" data-aos-duration="600" data-aos-delay="200">
+                    <h4 class="font-semibold text-slate-900 mb-2">Documentation & Training</h4>
+                    <p class="text-slate-600 text-sm">Knowledge capture, technical documentation, and team enablement.</p>
+                </div>
+                <div class="bg-slate-50 rounded-xl p-6 border border-slate-100" data-aos="flip-up" data-aos-duration="600" data-aos-delay="300">
+                    <h4 class="font-semibold text-slate-900 mb-2">Disaster Recovery</h4>
+                    <p class="text-slate-600 text-sm">Backup strategies, business continuity planning, and recovery testing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section id="approach" class="py-20 md:py-32 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up" data-aos-duration="800">
+                <p class="text-enterprise-600 font-semibold mb-4 uppercase tracking-wide">Our Approach</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-slate-900">
+                    A Proven Methodology for Success
+                </h2>
+                <p class="text-xl text-slate-600">
+                    Our structured approach minimizes risk while maximizing value.
+                    Every engagement follows a clear path from discovery to delivery.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="relative" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
+                    <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm h-full">
+                        <div class="w-12 h-12 bg-enterprise-600 rounded-xl flex items-center justify-center text-white font-bold text-lg mb-6">1</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-3">Discover</h3>
+                        <p class="text-slate-600 text-sm">
+                            Comprehensive assessment of your legacy landscape. We document every system,
+                            dependency, and integration point.
+                        </p>
+                    </div>
+                    <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
+                        <svg class="w-8 h-8 text-slate-300" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                    <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm h-full">
+                        <div class="w-12 h-12 bg-enterprise-600 rounded-xl flex items-center justify-center text-white font-bold text-lg mb-6">2</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-3">Plan</h3>
+                        <p class="text-slate-600 text-sm">
+                            Develop a detailed roadmap with clear milestones, risk mitigation strategies,
+                            and resource requirements.
+                        </p>
+                    </div>
+                    <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
+                        <svg class="w-8 h-8 text-slate-300" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                    <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm h-full">
+                        <div class="w-12 h-12 bg-enterprise-600 rounded-xl flex items-center justify-center text-white font-bold text-lg mb-6">3</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-3">Execute</h3>
+                        <p class="text-slate-600 text-sm">
+                            Incremental delivery with continuous testing and validation.
+                            Parallel operations ensure zero downtime.
+                        </p>
+                    </div>
+                    <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
+                        <svg class="w-8 h-8 text-slate-300" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+                    <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm h-full">
+                        <div class="w-12 h-12 bg-enterprise-600 rounded-xl flex items-center justify-center text-white font-bold text-lg mb-6">4</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-3">Optimize</h3>
+                        <p class="text-slate-600 text-sm">
+                            Knowledge transfer, documentation, and ongoing optimization to
+                            ensure long-term success.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="technologies" class="py-20 md:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up" data-aos-duration="800">
+                <p class="text-enterprise-600 font-semibold mb-4 uppercase tracking-wide">Expertise</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-slate-900">
+                    Deep Technical Expertise
+                </h2>
+                <p class="text-xl text-slate-600">
+                    Two decades of hands-on experience with the complete Microsoft legacy ecosystem.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <!-- Legacy Technologies -->
+                <div data-aos="fade-right" data-aos-duration="800">
+                    <h3 class="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
+                        <span class="w-8 h-8 bg-slate-200 rounded-lg flex items-center justify-center">
+                            <svg class="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </span>
+                        Legacy Technologies
+                    </h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-slate-50 rounded-xl p-4 border border-slate-100" data-aos="zoom-in" data-aos-delay="0">
+                            <div class="font-semibold text-slate-900 mb-1">ASP Classic</div>
+                            <div class="text-sm text-slate-500">VBScript / JScript</div>
+                        </div>
+                        <div class="bg-slate-50 rounded-xl p-4 border border-slate-100" data-aos="zoom-in" data-aos-delay="50">
+                            <div class="font-semibold text-slate-900 mb-1">Visual Basic 6</div>
+                            <div class="text-sm text-slate-500">Desktop Applications</div>
+                        </div>
+                        <div class="bg-slate-50 rounded-xl p-4 border border-slate-100" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="font-semibold text-slate-900 mb-1">VBA</div>
+                            <div class="text-sm text-slate-500">Office Automation</div>
+                        </div>
+                        <div class="bg-slate-50 rounded-xl p-4 border border-slate-100" data-aos="zoom-in" data-aos-delay="150">
+                            <div class="font-semibold text-slate-900 mb-1">VBScript</div>
+                            <div class="text-sm text-slate-500">Windows Scripting</div>
+                        </div>
+                        <div class="bg-slate-50 rounded-xl p-4 border border-slate-100" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="font-semibold text-slate-900 mb-1">COM / DCOM</div>
+                            <div class="text-sm text-slate-500">Component Services</div>
+                        </div>
+                        <div class="bg-slate-50 rounded-xl p-4 border border-slate-100" data-aos="zoom-in" data-aos-delay="250">
+                            <div class="font-semibold text-slate-900 mb-1">ActiveX</div>
+                            <div class="text-sm text-slate-500">Controls & DLLs</div>
+                        </div>
+                        <div class="bg-slate-50 rounded-xl p-4 border border-slate-100" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="font-semibold text-slate-900 mb-1">Microsoft Access</div>
+                            <div class="text-sm text-slate-500">Databases & Forms</div>
+                        </div>
+                        <div class="bg-slate-50 rounded-xl p-4 border border-slate-100" data-aos="zoom-in" data-aos-delay="350">
+                            <div class="font-semibold text-slate-900 mb-1">Office Interop</div>
+                            <div class="text-sm text-slate-500">Excel / Word / Outlook</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modern Technologies -->
+                <div data-aos="fade-left" data-aos-duration="800">
+                    <h3 class="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
+                        <span class="w-8 h-8 bg-enterprise-100 rounded-lg flex items-center justify-center">
+                            <svg class="w-4 h-4 text-enterprise-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </span>
+                        Modern Target Platforms
+                    </h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-enterprise-50 rounded-xl p-4 border border-enterprise-100" data-aos="zoom-in" data-aos-delay="0">
+                            <div class="font-semibold text-slate-900 mb-1">.NET 8 / Core</div>
+                            <div class="text-sm text-enterprise-600">C# / Razor Pages</div>
+                        </div>
+                        <div class="bg-enterprise-50 rounded-xl p-4 border border-enterprise-100" data-aos="zoom-in" data-aos-delay="50">
+                            <div class="font-semibold text-slate-900 mb-1">ASP.NET Core</div>
+                            <div class="text-sm text-enterprise-600">Web Applications</div>
+                        </div>
+                        <div class="bg-enterprise-50 rounded-xl p-4 border border-enterprise-100" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="font-semibold text-slate-900 mb-1">SQL Server</div>
+                            <div class="text-sm text-enterprise-600">Azure SQL</div>
+                        </div>
+                        <div class="bg-enterprise-50 rounded-xl p-4 border border-enterprise-100" data-aos="zoom-in" data-aos-delay="150">
+                            <div class="font-semibold text-slate-900 mb-1">Azure</div>
+                            <div class="text-sm text-enterprise-600">Cloud Services</div>
+                        </div>
+                        <div class="bg-enterprise-50 rounded-xl p-4 border border-enterprise-100" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="font-semibold text-slate-900 mb-1">REST APIs</div>
+                            <div class="text-sm text-enterprise-600">Modern Integration</div>
+                        </div>
+                        <div class="bg-enterprise-50 rounded-xl p-4 border border-enterprise-100" data-aos="zoom-in" data-aos-delay="250">
+                            <div class="font-semibold text-slate-900 mb-1">Power Platform</div>
+                            <div class="text-sm text-enterprise-600">Low-Code Solutions</div>
+                        </div>
+                        <div class="bg-enterprise-50 rounded-xl p-4 border border-enterprise-100" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="font-semibold text-slate-900 mb-1">Docker / K8s</div>
+                            <div class="text-sm text-enterprise-600">Containerization</div>
+                        </div>
+                        <div class="bg-enterprise-50 rounded-xl p-4 border border-enterprise-100" data-aos="zoom-in" data-aos-delay="350">
+                            <div class="font-semibold text-slate-900 mb-1">CI/CD</div>
+                            <div class="text-sm text-enterprise-600">DevOps Practices</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Infrastructure Expertise -->
+            <div class="mt-16 pt-16 border-t border-slate-200" data-aos="fade-up" data-aos-duration="800">
+                <h3 class="text-lg font-bold text-slate-900 mb-6 text-center">Infrastructure & Platform Expertise</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-lg text-sm font-medium" data-aos="fade-up" data-aos-delay="0">Windows Server 2003-2025</span>
+                    <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-lg text-sm font-medium" data-aos="fade-up" data-aos-delay="50">IIS 5.0-10.0</span>
+                    <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-lg text-sm font-medium" data-aos="fade-up" data-aos-delay="100">SQL Server 2000-2022</span>
+                    <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-lg text-sm font-medium" data-aos="fade-up" data-aos-delay="150">Active Directory</span>
+                    <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-lg text-sm font-medium" data-aos="fade-up" data-aos-delay="200">Group Policy</span>
+                    <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-lg text-sm font-medium" data-aos="fade-up" data-aos-delay="250">ODBC / ADO</span>
+                    <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-lg text-sm font-medium" data-aos="fade-up" data-aos-delay="300">Registry Management</span>
+                    <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-lg text-sm font-medium" data-aos="fade-up" data-aos-delay="350">DCOM Configuration</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section id="industries" class="py-20 md:py-32 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up" data-aos-duration="800">
+                <p class="text-enterprise-400 font-semibold mb-4 uppercase tracking-wide">Industries We Serve</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Trusted Across Regulated Industries
+                </h2>
+                <p class="text-xl text-slate-400">
+                    We understand the unique compliance requirements and operational constraints
+                    of mission-critical environments.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Industry Cards -->
+                <div class="bg-slate-800/50 rounded-2xl p-8 border border-slate-700" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
+                    <div class="w-12 h-12 bg-red-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Healthcare</h3>
+                    <p class="text-slate-400 text-sm mb-4">HIPAA-compliant modernization of patient management systems, lab integrations, and clinical applications.</p>
+                    <div class="text-enterprise-400 text-sm font-medium">HIPAA | HL7 | FHIR</div>
+                </div>
+
+                <div class="bg-slate-800/50 rounded-2xl p-8 border border-slate-700" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Financial Services</h3>
+                    <p class="text-slate-400 text-sm mb-4">Secure transformation of trading systems, banking applications, and regulatory reporting platforms.</p>
+                    <div class="text-enterprise-400 text-sm font-medium">SOX | PCI-DSS | FINRA</div>
+                </div>
+
+                <div class="bg-slate-800/50 rounded-2xl p-8 border border-slate-700" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Government</h3>
+                    <p class="text-slate-400 text-sm mb-4">FedRAMP and StateRAMP compliant modernization of citizen services and internal operations.</p>
+                    <div class="text-enterprise-400 text-sm font-medium">FedRAMP | FISMA | 508</div>
+                </div>
+
+                <div class="bg-slate-800/50 rounded-2xl p-8 border border-slate-700" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
+                    <div class="w-12 h-12 bg-yellow-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Manufacturing</h3>
+                    <p class="text-slate-400 text-sm mb-4">Modernization of production control systems, quality management, and supply chain applications.</p>
+                    <div class="text-enterprise-400 text-sm font-medium">ISO 9001 | MES | ERP</div>
+                </div>
+
+                <div class="bg-slate-800/50 rounded-2xl p-8 border border-slate-700" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Insurance</h3>
+                    <p class="text-slate-400 text-sm mb-4">Claims processing, underwriting systems, and policy management modernization.</p>
+                    <div class="text-enterprise-400 text-sm font-medium">SOC 2 | NAIC | State Regs</div>
+                </div>
+
+                <div class="bg-slate-800/50 rounded-2xl p-8 border border-slate-700" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Legal & Professional</h3>
+                    <p class="text-slate-400 text-sm mb-4">Case management, document automation, and billing system modernization.</p>
+                    <div class="text-enterprise-400 text-sm font-medium">ABA | Client Confidentiality</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 md:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up" data-aos-duration="800">
+                <p class="text-enterprise-600 font-semibold mb-4 uppercase tracking-wide">Client Success</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-slate-900">
+                    What Our Clients Say
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
+                    <div class="flex items-center gap-1 mb-4">
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <p class="text-slate-600 mb-6">
+                        "The migration of our 15-year-old VB6 trading system was flawless. Zero downtime,
+                        full functionality preserved, and our team was trained on the new platform within weeks."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-slate-300 rounded-full"></div>
+                        <div>
+                            <div class="font-semibold text-slate-900">Michael Chen</div>
+                            <div class="text-sm text-slate-500">CTO, Regional Bank</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                    <div class="flex items-center gap-1 mb-4">
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <p class="text-slate-600 mb-6">
+                        "Our ASP Classic patient portal was a compliance nightmare. They modernized it
+                        to .NET Core while maintaining HIPAA compliance throughout the transition."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-slate-300 rounded-full"></div>
+                        <div>
+                            <div class="font-semibold text-slate-900">Dr. Sarah Williams</div>
+                            <div class="text-sm text-slate-500">CIO, Healthcare Network</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                    <div class="flex items-center gap-1 mb-4">
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <p class="text-slate-600 mb-6">
+                        "We had 47 Access databases running critical manufacturing operations.
+                        The consolidation to SQL Server improved performance 10x and eliminated data integrity issues."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-slate-300 rounded-full"></div>
+                        <div>
+                            <div class="font-semibold text-slate-900">James Rodriguez</div>
+                            <div class="text-sm text-slate-500">VP of IT, Manufacturing Corp</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-20 md:py-32 bg-gradient-to-br from-enterprise-600 to-enterprise-800 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up" data-aos-duration="800">
+                Let's Discuss Your Legacy Modernization Strategy
+            </h2>
+            <p class="text-xl text-enterprise-100 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                Schedule a confidential consultation with our team. We'll assess your current state
+                and provide actionable recommendations tailored to your business objectives.
+            </p>
+
+            <div class="bg-white rounded-2xl p-8 max-w-xl mx-auto text-left" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                <form class="space-y-4">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">First Name</label>
+                            <input type="text" class="w-full border border-slate-300 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-enterprise-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Last Name</label>
+                            <input type="text" class="w-full border border-slate-300 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-enterprise-500 focus:border-transparent">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Work Email</label>
+                        <input type="email" class="w-full border border-slate-300 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-enterprise-500 focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Company</label>
+                        <input type="text" class="w-full border border-slate-300 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-enterprise-500 focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">How Can We Help?</label>
+                        <select class="w-full border border-slate-300 rounded-lg px-4 py-3 text-slate-700 focus:outline-none focus:ring-2 focus:ring-enterprise-500 focus:border-transparent">
+                            <option value="">Select a service</option>
+                            <option value="assessment">Strategic Assessment</option>
+                            <option value="migration">Migration Services</option>
+                            <option value="support">Enterprise Support</option>
+                            <option value="consulting">General Consulting</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Tell Us About Your Project</label>
+                        <textarea rows="3" class="w-full border border-slate-300 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-enterprise-500 focus:border-transparent resize-none"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-enterprise-600 hover:bg-enterprise-700 text-white font-semibold py-4 rounded-xl text-lg transition-all">
+                        Schedule Consultation
+                    </button>
+                </form>
+                <p class="text-slate-500 text-sm mt-4 text-center">
+                    We respect your privacy. Your information will never be shared.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-enterprise-600 to-enterprise-700 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="text-xl font-bold text-white">Legacy Systems</span>
+                            <span class="text-xl font-light text-slate-500"> Consulting</span>
+                        </div>
+                    </div>
+                    <p class="text-sm">
+                        Enterprise consulting for legacy Windows application modernization.
+                        Two decades of trusted expertise.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#services" class="hover:text-enterprise-400 transition-colors">Strategic Assessment</a></li>
+                        <li><a href="#services" class="hover:text-enterprise-400 transition-colors">Managed Modernization</a></li>
+                        <li><a href="#services" class="hover:text-enterprise-400 transition-colors">Enterprise Support</a></li>
+                        <li><a href="#services" class="hover:text-enterprise-400 transition-colors">Security & Compliance</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Technologies</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>ASP Classic</li>
+                        <li>Visual Basic 6</li>
+                        <li>VBA & VBScript</li>
+                        <li>Microsoft Access</li>
+                        <li>COM / DCOM</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#approach" class="hover:text-enterprise-400 transition-colors">Our Approach</a></li>
+                        <li><a href="#industries" class="hover:text-enterprise-400 transition-colors">Industries</a></li>
+                        <li><a href="#contact" class="hover:text-enterprise-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm">
+                    &copy; 2025 Legacy Systems Consulting. All rights reserved.
+                </p>
+                <div class="flex gap-6 text-sm">
+                    <a href="#" class="hover:text-enterprise-400 transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-enterprise-400 transition-colors">Terms of Service</a>
+                    <a href="#" class="hover:text-enterprise-400 transition-colors">NDA Request</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 100,
+            easing: 'ease-out-cubic'
+        });
+    </script>
+
+</body>
+</html>

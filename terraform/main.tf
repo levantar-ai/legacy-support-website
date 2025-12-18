@@ -30,7 +30,7 @@ variable "aws_region" {
 variable "domain_name" {
   description = "Domain name for the website"
   type        = string
-  default     = "legacysupport.levantar.ai"
+  default     = "legacyexpert.levantar.ai"
 }
 
 variable "hosted_zone_name" {

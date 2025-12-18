@@ -1,6 +1,6 @@
-# robots.txt for legacysupport.levantar.ai
+# robots.txt for legacyexpert.levantar.ai
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://legacysupport.levantar.ai/sitemap.xml
+Sitemap: https://legacyexpert.levantar.ai/sitemap.xml

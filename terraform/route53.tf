@@ -1,4 +1,4 @@
-# Route 53 record for legacysupport.levantar.ai pointing to CloudFront
+# Route 53 record for legacyexpert.levantar.ai pointing to CloudFront
 resource "aws_route53_record" "website" {
   zone_id = data.aws_route53_zone.levantar_ai.zone_id
   name    = var.domain_name

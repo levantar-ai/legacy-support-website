@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legacy Migration Roadmap</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'legacy-dark': '#0f172a',
+                        'legacy-blue': '#1e40af',
+                        'legacy-accent': '#f59e0b',
+                        'danger': '#dc2626',
+                        'warning': '#f97316',
+                        'gray-850': '#18202f',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        @page { size: A3 landscape; margin: 0; }
+        body { font-family: 'Inter', sans-serif; }
+        @media print {
+            body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body class="bg-legacy-dark text-gray-100" style="width: 420mm; height: 297mm;">
+    <div class="w-full h-full p-12 flex flex-col">
+        <!-- Header -->
+        <div class="flex justify-between items-start mb-8">
+            <div>
+                <div class="inline-flex items-center bg-legacy-accent/20 border border-legacy-accent/50 rounded-full px-4 py-2 mb-4">
+                    <span class="text-legacy-accent text-lg font-semibold">YOUR PATH FORWARD</span>
+                </div>
+                <h1 class="text-5xl font-black mb-2">
+                    The <span class="text-legacy-accent">5-Step</span> Legacy Migration Roadmap
+                </h1>
+                <p class="text-xl text-gray-400">From risk assessment to modern platform — how we modernize your legacy systems safely</p>
+            </div>
+            <div class="text-right flex-shrink-0">
+                <div class="text-4xl font-black text-legacy-accent">Legacy</div>
+                <div class="text-4xl font-black text-white">Expert</div>
+            </div>
+        </div>
+
+        <!-- Roadmap -->
+        <div class="flex-1 flex items-center">
+            <div class="w-full">
+                <!-- Connection line -->
+                <div class="relative">
+                    <div class="absolute top-16 left-12 right-12 h-2 bg-gradient-to-r from-legacy-accent via-warning to-green-500 rounded-full"></div>
+                </div>
+
+                <!-- Steps -->
+                <div class="flex justify-between relative">
+                    <!-- Step 1 -->
+                    <div class="w-1/5 px-2 text-center">
+                        <div class="w-32 h-32 bg-legacy-accent rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-legacy-accent/30 relative z-10">
+                            <svg class="w-16 h-16 text-legacy-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                            </svg>
+                        </div>
+                        <div class="text-3xl font-black text-legacy-accent mb-2">1</div>
+                        <div class="text-xl font-bold text-white mb-3">ASSESS</div>
+                        <div class="bg-gray-800/50 rounded-xl p-4 border border-gray-700 text-left">
+                            <ul class="text-gray-300 space-y-2 text-sm">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-legacy-accent">•</span>
+                                    <span>Complete codebase audit</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-legacy-accent">•</span>
+                                    <span>Security vulnerability scan</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-legacy-accent">•</span>
+                                    <span>Dependency mapping</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-legacy-accent">•</span>
+                                    <span>Risk scoring & prioritization</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="w-1/5 px-2 text-center">
+                        <div class="w-32 h-32 bg-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-orange-500/30 relative z-10">
+                            <svg class="w-16 h-16 text-legacy-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                        </div>
+                        <div class="text-3xl font-black text-orange-500 mb-2">2</div>
+                        <div class="text-xl font-bold text-white mb-3">DOCUMENT</div>
+                        <div class="bg-gray-800/50 rounded-xl p-4 border border-gray-700 text-left">
+                            <ul class="text-gray-300 space-y-2 text-sm">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-orange-500">•</span>
+                                    <span>Business logic extraction</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-orange-500">•</span>
+                                    <span>Database schema analysis</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-orange-500">•</span>
+                                    <span>Integration point mapping</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-orange-500">•</span>
+                                    <span>AI-assisted code documentation</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="w-1/5 px-2 text-center">
+                        <div class="w-32 h-32 bg-warning rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-warning/30 relative z-10">
+                            <svg class="w-16 h-16 text-legacy-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                            </svg>
+                        </div>
+                        <div class="text-3xl font-black text-warning mb-2">3</div>
+                        <div class="text-xl font-bold text-white mb-3">SECURE</div>
+                        <div class="bg-gray-800/50 rounded-xl p-4 border border-gray-700 text-left">
+                            <ul class="text-gray-300 space-y-2 text-sm">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-warning">•</span>
+                                    <span>Critical vulnerability patches</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-warning">•</span>
+                                    <span>DCOM hardening compliance</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-warning">•</span>
+                                    <span>IIS security configuration</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-warning">•</span>
+                                    <span>Backup & DR implementation</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="w-1/5 px-2 text-center">
+                        <div class="w-32 h-32 bg-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-blue-500/30 relative z-10">
+                            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                            </svg>
+                        </div>
+                        <div class="text-3xl font-black text-blue-500 mb-2">4</div>
+                        <div class="text-xl font-bold text-white mb-3">MIGRATE</div>
+                        <div class="bg-gray-800/50 rounded-xl p-4 border border-gray-700 text-left">
+                            <ul class="text-gray-300 space-y-2 text-sm">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-blue-500">•</span>
+                                    <span>Incremental modernization</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-blue-500">•</span>
+                                    <span>ASP Classic → ASP.NET Core</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-blue-500">•</span>
+                                    <span>VB6 → C#/.NET 8</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-blue-500">•</span>
+                                    <span>Access → SQL Server/Azure</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="w-1/5 px-2 text-center">
+                        <div class="w-32 h-32 bg-green-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-green-500/30 relative z-10">
+                            <svg class="w-16 h-16 text-legacy-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div class="text-3xl font-black text-green-500 mb-2">5</div>
+                        <div class="text-xl font-bold text-white mb-3">SUPPORT</div>
+                        <div class="bg-gray-800/50 rounded-xl p-4 border border-gray-700 text-left">
+                            <ul class="text-gray-300 space-y-2 text-sm">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-green-500">•</span>
+                                    <span>Zero-downtime deployment</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-green-500">•</span>
+                                    <span>Team knowledge transfer</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-green-500">•</span>
+                                    <span>Ongoing maintenance</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-green-500">•</span>
+                                    <span>Future-proof architecture</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-700">
+            <div class="flex gap-6">
+                <div class="text-center">
+                    <div class="text-3xl font-black text-legacy-accent">20+</div>
+                    <div class="text-gray-400">Years Experience</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-black text-legacy-accent">100%</div>
+                    <div class="text-gray-400">Remote Capable</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-black text-legacy-accent">AI</div>
+                    <div class="text-gray-400">Powered Analysis</div>
+                </div>
+            </div>
+            <div class="text-gray-400 text-lg max-w-md">
+                Every migration is unique. We tailor the approach based on your business priorities, risk tolerance, and timeline.
+            </div>
+            <div class="bg-legacy-accent rounded-2xl p-6 text-center">
+                <div class="text-xl font-bold text-legacy-dark mb-1">Start With Step 1</div>
+                <div class="text-lg text-legacy-dark/80">Free Risk Assessment</div>
+                <div class="text-lg text-legacy-dark/80 font-semibold">legacyexpert.levantar.ai</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

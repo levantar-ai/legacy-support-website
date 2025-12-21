@@ -15,3 +15,9 @@ Thumbs.db
 .vscode/
 *.swp
 *.swo
+
+# Node
+node_modules/
+
+# Generated PDFs (created in CI)
+infographics/pdf/

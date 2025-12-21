@@ -14,7 +14,7 @@ resource "aws_cloudfront_response_headers_policy" "security_headers" {
 
     # Content-Security-Policy - allowing Tailwind CDN, AOS library, Google Fonts, and API
     content_security_policy {
-      content_security_policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.opptora.ai; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+      content_security_policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://unpkg.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.opptora.ai https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
       override                = true
     }
 

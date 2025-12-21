@@ -1355,6 +1355,12 @@
                                 form.classList.add('hidden');
                                 document.getElementById('form-success').classList.remove('hidden');
                                 form.reset();
+                                // Track successful form submission
+                                gtag('event', 'generate_lead', {
+                                    event_category: 'form',
+                                    event_label: challenge || 'not_specified',
+                                    value: 1
+                                });
                             } else {
                                 throw new Error('Request failed');
                             }
@@ -1362,6 +1368,11 @@
                             console.error('Form submission error:', error);
                             form.classList.add('hidden');
                             document.getElementById('form-error').classList.remove('hidden');
+                            // Track form error
+                            gtag('event', 'form_error', {
+                                event_category: 'form',
+                                event_label: 'submission_failed'
+                            });
                         } finally {
                             submitBtn.disabled = false;
                             submitBtn.textContent = originalBtnText;
@@ -1471,6 +1482,84 @@
             offset: 100,
             easing: 'ease-out-cubic'
         });
+    </script>
+
+    <!-- Google Analytics Event Tracking -->
+    <script>
+    (function() {
+        // Track CTA button clicks
+        document.querySelectorAll('a[href="#contact"]').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var location = 'unknown';
+                if (this.closest('nav')) location = 'nav';
+                else if (this.closest('header')) location = 'hero';
+                else if (this.closest('.pulse-danger')) location = 'banner';
+                else if (this.closest('footer')) location = 'footer';
+                else if (this.closest('.fixed')) location = 'floating_button';
+
+                gtag('event', 'cta_click', {
+                    event_category: 'engagement',
+                    event_label: location
+                });
+            });
+        });
+
+        // Track navigation clicks
+        document.querySelectorAll('nav a:not([href="#contact"])').forEach(function(link) {
+            link.addEventListener('click', function() {
+                gtag('event', 'nav_click', {
+                    event_category: 'navigation',
+                    event_label: this.getAttribute('href').replace('#', '')
+                });
+            });
+        });
+
+        // Track FAQ interactions
+        document.querySelectorAll('details').forEach(function(faq) {
+            faq.addEventListener('toggle', function() {
+                if (this.open) {
+                    var question = this.querySelector('summary span')?.textContent?.substring(0, 50) || 'unknown';
+                    gtag('event', 'faq_open', {
+                        event_category: 'engagement',
+                        event_label: question
+                    });
+                }
+            });
+        });
+
+        // Track section visibility (key sections only)
+        var trackedSections = {};
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting && !trackedSections[entry.target.id]) {
+                    trackedSections[entry.target.id] = true;
+                    gtag('event', 'section_view', {
+                        event_category: 'engagement',
+                        event_label: entry.target.id
+                    });
+                }
+            });
+        }, { threshold: 0.3 });
+
+        ['risks', 'services', 'industries', 'process', 'contact'].forEach(function(id) {
+            var section = document.getElementById(id);
+            if (section) observer.observe(section);
+        });
+
+        // Track form field interactions (first touch only)
+        var formFieldsTracked = {};
+        document.querySelectorAll('#contact-form input, #contact-form select, #contact-form textarea').forEach(function(field) {
+            field.addEventListener('focus', function() {
+                if (!formFieldsTracked[this.id]) {
+                    formFieldsTracked[this.id] = true;
+                    gtag('event', 'form_start', {
+                        event_category: 'form',
+                        event_label: this.id
+                    });
+                }
+            }, { once: true });
+        });
+    })();
     </script>
 
 </body>
